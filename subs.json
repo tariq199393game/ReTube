@@ -12,7 +12,18 @@
    "start": "2026-11-09",
    "end": "9999-12-31",
    "on": true
+  },
+  {
+   "id": "b523432799b36e3f7dc4c5d8b27418c883ea9df2f9e08453bf27f9b3ee3719df",
+   "profiles": 10,
+   "devices": 30,
+   "note": "lifetime",
+   "salt": "c95e34374bcc6f8209eb9eacb6a24995",
+   "pw": "990c89b1d96e1dd072cd25cfe841ed81532be84206e0ee43fc59e08a7a89e1f0",
+   "start": "2026-11-09",
+   "end": "9999-12-31",
+   "on": true
   }
  ],
- "updated": "2026-11-09 15:43"
+ "updated": "2026-11-09 16:10"
 }
