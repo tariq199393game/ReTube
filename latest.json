@@ -1,7 +1,7 @@
 {
  "catalog": 202611090750,
- "app": 51,
- "appName": "6.3",
+ "app": 53,
+ "appName": "6.5",
  "apk": "https://github.com/tariq199393game/ReTube/releases/latest/download/ReTube.apk",
- "notes": "حسابات واشتراكات، 10 ملفات لكل حساب، وقائمتي"
+ "notes": "أزرار التحكم بالفيديو: تشغيل/إيقاف، ±10 ثوانٍ، CC، الإعدادات"
 }

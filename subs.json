@@ -6,13 +6,13 @@
    "id": "4fb4205e0e01bcb35c723b20309ae4dca575dfe500468ab894a5a6c0d8d3eedd",
    "profiles": 10,
    "devices": 30,
-   "note": "owner",
-   "salt": "747e34cf5162219f559ff4cd4235e04e",
-   "pw": "5d96649977339992b472f2ccdcfa2bc290239ada2e96f3d40b0babd8742862f3",
+   "note": "owner · lifetime",
+   "salt": "9b86925814049914a1a4f1e886a0a4f4",
+   "pw": "86ff47d702dc5fd82cbbc78d50fbf8e8bb9d94ea3b443bc6002f6b4e172b25a3",
    "start": "2026-11-09",
-   "end": "2027-11-09",
+   "end": "9999-12-31",
    "on": true
   }
  ],
- "updated": "2026-11-09 15:16"
+ "updated": "2026-11-09 15:43"
 }
