@@ -1,0 +1,18 @@
+{
+ "v": 1,
+ "iter": 120000,
+ "subs": [
+  {
+   "id": "4fb4205e0e01bcb35c723b20309ae4dca575dfe500468ab894a5a6c0d8d3eedd",
+   "profiles": 10,
+   "devices": 30,
+   "note": "owner",
+   "salt": "747e34cf5162219f559ff4cd4235e04e",
+   "pw": "5d96649977339992b472f2ccdcfa2bc290239ada2e96f3d40b0babd8742862f3",
+   "start": "2026-11-09",
+   "end": "2027-11-09",
+   "on": true
+  }
+ ],
+ "updated": "2026-11-09 15:16"
+}
