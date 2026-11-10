@@ -1,7 +1,7 @@
 {
  "catalog": 202611100551,
- "app": 58,
- "appName": "7.0",
+ "app": 59,
+ "appName": "7.1",
  "apk": "https://github.com/tariq199393game/ReTube/releases/latest/download/ReTube.apk",
- "notes": "التحديث داخل قائمة الحساب ويعمل متى شئت (ويبقى تلقائياً كل 24 ساعة) · صورة المجلد تصبح غلاف مسلسلات سيلفي · تصحيح أسماء مسلسلات سيلفي القديمة"
+ "notes": "دعم ملفات rmvb و rm (وكذلك vob و divx و asf) وتشغيلها دائماً بمشغّل VLC"
 }
