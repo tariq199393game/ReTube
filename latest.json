@@ -1,7 +1,7 @@
 {
  "catalog": 202611100551,
- "app": 59,
- "appName": "7.1",
+ "app": 61,
+ "appName": "7.3",
  "apk": "https://github.com/tariq199393game/ReTube/releases/latest/download/ReTube.apk",
- "notes": "دعم ملفات rmvb و rm (وكذلك vob و divx و asf) وتشغيلها دائماً بمشغّل VLC"
+ "notes": "حسابي في الشريط مكان التنزيلات · التنزيلات ودليل الاستخدام التفاعلي في القائمة · التحديث يبحث عن الجديد في مجلدات سيلفي · دعم كل صيغ الفيديو التي يشغّلها VLC"
 }
