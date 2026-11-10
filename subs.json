@@ -11,7 +11,8 @@
    "pw": "86ff47d702dc5fd82cbbc78d50fbf8e8bb9d94ea3b443bc6002f6b4e172b25a3",
    "start": "2026-11-09",
    "end": "9999-12-31",
-   "on": true
+   "on": true,
+   "admin": true
   },
   {
    "id": "b523432799b36e3f7dc4c5d8b27418c883ea9df2f9e08453bf27f9b3ee3719df",
@@ -25,5 +26,5 @@
    "on": true
   }
  ],
- "updated": "2026-11-09 16:10"
+ "updated": "2026-11-10 12:54"
 }
