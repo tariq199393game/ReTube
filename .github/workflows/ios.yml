@@ -62,6 +62,7 @@ jobs:
           xcrun simctl spawn "$UDID" log show --last 8m --style compact --predicate 'process == "Grabit"' 2>/dev/null | tail -300 > ci/log.txt || true
 
       - name: Build for iPhone (unsigned)
+        if: "!contains(github.event.head_commit.message, '[sim]')"
         run: |
           PROJ=$(find ios/build -name 'Grabit.xcodeproj' | head -1)
           test -n "$PROJ"
@@ -79,7 +80,7 @@ jobs:
           (ls -la out/Grabit.ipa; /usr/libexec/PlistBuddy -c 'Print' "$APP/Info.plist" | head -60; find out/Payload -maxdepth 2 | head -30; find out/Payload -name '*.framework' | wc -l; find out/Payload -name '*.so' | wc -l) > ci/ipa.txt
 
       - name: Publish the iPhone file
-        if: success()
+        if: "success() && !contains(github.event.head_commit.message, '[sim]')"
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

@@ -64,7 +64,7 @@ class Grabit(toga.App):
             self.loop.call_soon_threadsafe(lambda: self._open(url))
             if os.environ.get('GRABIT_SELFTEST'):
                 from grabitios import selftest
-                selftest.run(downloads, url)
+                selftest.run(downloads, url, self)
         except Exception:
             text = traceback.format_exc()
             print(text, flush=True)

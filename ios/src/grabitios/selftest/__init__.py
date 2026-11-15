@@ -9,7 +9,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
-def run(folder, url):
+def run(folder, url, app=None):
     lines = []
 
     def check(name, fn):
@@ -84,7 +84,35 @@ def run(folder, url):
         info = engine.describe(engine.resolve('https://www.youtube.com/watch?v=jNQXAC9IVRw'))
         return json.dumps(info['options'])[:300]
 
+    def layout():
+        import asyncio
+        js = ('JSON.stringify({sat:getComputedStyle(document.documentElement).getPropertyValue("--sat"),'
+              'inline:document.documentElement.getAttribute("style"),top:document.querySelector(".top").getBoundingClientRect().toJSON(),'
+              'hero:document.querySelector(".hero").getBoundingClientRect().toJSON(),scrollY:window.scrollY,inner:[innerWidth,innerHeight],'
+              'vv:[visualViewport.offsetTop,visualViewport.height],href:location.href.replace(/\\/[\\w-]{10,}\\//,"/T/"),'
+              'css:[...document.styleSheets[0].cssRules].find(r=>r.selectorText==".top").cssText})')
+        time.sleep(4)
+        page = asyncio.run_coroutine_threadsafe(app.web.evaluate_javascript(js), app.loop).result(15)
+        native = app.web._impl.native
+        from grabit.ios import _get
+        frame = _get(native, 'frame')
+        scroll = _get(native, 'scrollView')
+        facts = {}
+        for name in ('contentOffset', 'contentInset', 'adjustedContentInset', 'safeAreaInsets'):
+            try:
+                v = _get(scroll if name != 'safeAreaInsets' else native, name)
+                facts[name] = [round(float(getattr(v, f[0])), 1) for f in v._fields_]
+            except Exception as e:
+                facts[name] = repr(e)
+        try:
+            facts['frame'] = [[round(float(getattr(part, f[0])), 1) for f in part._fields_] for part in (getattr(frame, frame._fields_[0][0]), getattr(frame, frame._fields_[1][0]))]
+        except Exception as e:
+            facts['frame'] = repr(e)
+        return '%s | native %s' % (page, facts)
+
     check('engine and page', ui)
+    if app is not None:
+        check('page layout', layout)
     check('javascript engine', javascript)
     check('join video + audio', join)
     check('audio only from a video', audio_only)
