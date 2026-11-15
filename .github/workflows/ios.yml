@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   ios:
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
@@ -21,6 +21,7 @@ jobs:
 
       - name: Create the Xcode project
         run: |
+          xcodebuild -version
           pip install briefcase
           cd ios
           rm -rf src/grabit && cp -R ../core/grabit src/grabit
