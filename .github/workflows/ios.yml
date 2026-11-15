@@ -80,8 +80,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete grabit-ios --yes --cleanup-tag || true
-          gh release create grabit-ios out/Grabit.ipa --prerelease --target "$GITHUB_SHA" \
+          gh release delete grabit-ios --yes --cleanup-tag || true     # early build published under the branch's name
+          gh release delete grabit-iphone --yes --cleanup-tag || true
+          gh release create grabit-iphone out/Grabit.ipa --prerelease --target "$GITHUB_SHA" \
             --title "Grabit for iPhone (unsigned)" \
             --notes "Unsigned build. Sign it with your own Apple ID (3uTools, Sideloadly, AltStore or SideStore) before installing."
 
