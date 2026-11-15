@@ -1,0 +1,78 @@
+-rw-r--r--  1 runner  staff  26228686 Nov 15 21:46 out/Grabit.ipa
+Dict {
+    UIRequiredDeviceCapabilities = Array {
+        arm64
+    }
+    UIRequiresFullScreen = true
+    CFBundleInfoDictionaryVersion = 6.0
+    UISupportedInterfaceOrientations~ipad = Array {
+        UIInterfaceOrientationPortrait
+        UIInterfaceOrientationPortraitUpsideDown
+        UIInterfaceOrientationLandscapeLeft
+        UIInterfaceOrientationLandscapeRight
+    }
+    DTPlatformVersion = 26.5
+    UIUserInterfaceStyle = Dark
+    CFBundleName = Grabit
+    DTSDKName = iphoneos26.5
+    CFBundleIcons = Dict {
+        CFBundlePrimaryIcon = Dict {
+            CFBundleIconFiles = Array {
+                AppIcon60x60
+            }
+            CFBundleIconName = AppIcon
+        }
+    }
+    CFBundleDisplayName = Grabit
+    LSRequiresIPhoneOS = true
+    MainModule = grabitios
+    DTSDKBuild = 23F81a
+    CFBundleShortVersionString = 2.5.0
+    CFBundleSupportedPlatforms = Array {
+        iPhoneOS
+    }
+    UISupportedInterfaceOrientations = Array {
+        UIInterfaceOrientationPortrait
+        UIInterfaceOrientationLandscapeLeft
+        UIInterfaceOrientationLandscapeRight
+    }
+    BuildMachineOSBuild = 25G332
+    DTPlatformBuild = 23F81a
+    CFBundlePackageType = APPL
+    DTXcodeBuild = 17F113
+    CFBundleDevelopmentRegion = en
+    MinimumOSVersion = 15.0
+    CFBundleVersion = 1
+    NSPhotoLibraryAddUsageDescription = Grabit saves the videos and pictures you download to your Photos when you choose Save.
+    UIFileSharingEnabled = true
+    LSSupportsOpeningDocumentsInPlace = true
+    UIDeviceFamily = Array {
+        1
+        2
+    }
+    UILaunchStoryboardName = Launch Screen
+    CFBundleIdentifier = app.grabit.grabitios
+    UIApplicationSceneManifest = Dict {
+        UIApplicationSupportsMultipleScenes = false
+        UISceneConfigurations = Dict {
+        }
+    }
+    DTXcode = 2660
+    CFBundleExecutable = Grabit
+out/Payload
+out/Payload/Grabit.app
+out/Payload/Grabit.app/_CodeSignature
+out/Payload/Grabit.app/Grabit
+out/Payload/Grabit.app/en.lproj
+out/Payload/Grabit.app/app
+out/Payload/Grabit.app/python
+out/Payload/Grabit.app/AppIcon60x60@2x.png
+out/Payload/Grabit.app/Launch Screen.storyboardc
+out/Payload/Grabit.app/app_packages
+out/Payload/Grabit.app/Assets.car
+out/Payload/Grabit.app/AppIcon76x76@2x~ipad.png
+out/Payload/Grabit.app/Frameworks
+out/Payload/Grabit.app/Info.plist
+out/Payload/Grabit.app/PkgInfo
+      69
+       0

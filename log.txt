@@ -1,0 +1,300 @@
+2026-11-15 21:43:38.741 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=117] WebResourceLoader::WebResourceLoader
+2026-11-15 21:43:38.791 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=117] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:43:38.802 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=117] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:43:38.803 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=117] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:43:38.803 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=117 SubResourceLoader::didFinishLoading
+2026-11-15 21:43:39.265 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_MentorPrerollComplete: <0x139b2f800|> track 1 v, currentOrder 0x940cf99ac2a05ef9 (1001), orderFromPayload 0x940cf99ac2a05ef9 (1001), DidReachPrerollLevel, CURRENT, masterOrder 0x940cf99ac5008af9 (1000001), waitingForMentorPreroll
+2026-11-15 21:43:39.265 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_beginPrerollPhase2: <0x139b2f800|> Beginning Preroll Phase 2, masterOrder 0x940cf99ac5008af9 (1000001)
+2026-11-15 21:43:39.266 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBossPrerollCompleted: <0x139b2f800|> called
+2026-11-15 21:43:40.451 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_MentorStopping: <0x139b2f800|> all mentors are now idle
+2026-11-15 21:43:40.452 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_sendBecameIdleNotificationIfNowIdle: <0x139b2f800|> posting BecameIdle notification now that all mentors have finished prerolling
+2026-11-15 21:43:40.452 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_SinglePassBossBecameIdle: (0x13a16c400) state started
+2026-11-15 21:43:40.464 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_handleLastStep: (0x13a16c400) state started
+2026-11-15 21:43:40.506 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_PostFailureNotificationIfError: (0x13a16c400) state finish writing called
+2026-11-15 21:43:40.506 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_handleLastStep: Leaving [0x13a16c400] err 0 state finish writing completed
+2026-11-15 21:43:40.506 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_transitionToStatus: 0x136e70a00 newStatus 4
+2026-11-15 21:43:40.524 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBossPrerollCompleted: <0x139b2f800|> cleaning up for invalidation
+2026-11-15 21:43:40.524 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_sendBecameIdleNotificationIfNowIdle: <0x139b2f800|> posting BecameIdle notification now that all mentors have finished prerolling
+2026-11-15 21:43:40.533 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e31960)
+2026-11-15 21:43:40.534 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e323e0)
+2026-11-15 21:43:40.534 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_Finalize: (0x13a16c400) state invalidated
+2026-11-15 21:43:40.534 Df Grabit[15615:bc99] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x136ca61c0
+2026-11-15 21:43:40.535 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> FigAssetReaderTrackFinalize: (0x136e31960)
+2026-11-15 21:43:40.535 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e31960)
+2026-11-15 21:43:40.536 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> FigAssetReaderTrackFinalize: (0x136e323e0)
+2026-11-15 21:43:40.536 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e323e0)
+2026-11-15 21:43:40.567 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> FigAssetCreateWithURL: Called for asset 0x136ca69c0 by client [], url [0x108c7b540] <file // redacted-7D83H8 // mp4> createFlags 0x8 optionsDict <redacted>
+2026-11-15 21:43:40.567 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> figPruneOSTransactionArrayWhilePerformingOperation: [Fig Transaction] Pruned transaction weak reference holder: <0x13a1ce5c0>
+2026-11-15 21:43:40.567 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> FigOSTransactionCreateWithProcessName: [Fig Transaction] Added transaction weak reference holder with URL <0x13a1cee80>: 1794779020 URLAsset withURL 15615:Grabit  10649728383148084504
+2026-11-15 21:43:40.568 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLLoaderCreate: newLoader: 0x13a1b92d0
+2026-11-15 21:43:40.568 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLHandlerCreate: newHandler: com.apple.avfoundation.customurl.cfurlconnection.0x13a251700 options: {
+    "CURLHOption_OKToLogURLs" = 0;
+}
+2026-11-15 21:43:40.568 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_installHandler: 0x13a1b92f0: handler: 0x13a251700 priority: 100
+2026-11-15 21:43:40.568 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLHandlerCreate: newHandler: com.apple.avfoundation.authkeychain.0x13a251780 options: {
+    "CURLHOption_OKToLogURLs" = 0;
+}
+2026-11-15 21:43:40.568 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_installHandler: 0x13a1b92f0: handler: 0x13a251780 priority: 800
+2026-11-15 21:43:40.590 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> FigOSTransactionCreateWithProcessName: [Fig Transaction] Added transaction weak reference holder <0x13a1ce620>: 1794779020 URLAsset withFormatReader 15615:Grabit
+2026-11-15 21:43:40.591 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> FigAssetExportSessionCreateWithAsset: 0x136e70e00
+2026-11-15 21:43:40.597 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_ExportAsynchronously: 0x136e70e00
+2026-11-15 21:43:40.597 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_validateOutputFileTypeForExport: 0x136e70e00
+2026-11-15 21:43:40.597 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_transitionToStatus: 0x136e70e00 newStatus 1
+2026-11-15 21:43:40.597 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_createRemakerAndBeginExport: 0x136e70e00
+2026-11-15 21:43:40.599 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> FigOSTransactionCreateWithProcessName: [Fig Transaction] Added transaction weak reference holder <0x13a1ce900>: 1794779020 URLAsset withFormatReader 15615:Grabit
+2026-11-15 21:43:40.605 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_SetTimeRange: (0x13a16ec00) [0.000,inf]
+2026-11-15 21:43:40.605 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_AddPassthroughTrackWithOptions: (0x13a16ec00) id 1
+2026-11-15 21:43:40.607 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_StartOutput: (0x13a16ec00) Starting
+2026-11-15 21:43:40.609 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> bossBuildMentorForTrack: <0x139b2fb80|> track 1 (soun) enableForStepping mentor 0x13a2c9500 (snippetMentor 0x13a2c9500 -> loopingMentor 0x0 -> superEditMentor 0x13a2c9200 -> editMentor 0x13a2c8f00 -> gaplessMentor 0x0 -> audioMentor 0x13a1a3d80
+2026-11-15 21:43:40.614 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> FigPlaybackBossCreate: returning boss = 0x139b2fb80
+2026-11-15 21:43:40.720 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> FigPlaybackBossSendSamplesForTimeRange: <0x139b2fb80|> called, startTime = 0.000, endTime = inf, options = 0
+2026-11-15 21:43:40.720 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> bossSetMentorModesToForwardPlayback: <0x139b2fb80|> called, tracks 0...0, start time 0.000, end time inf, rate 1.00, previousOutputDisposition=1
+2026-11-15 21:43:40.721 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_StartOutput: (0x13a16ec00) posting Remaker_Started
+2026-11-15 21:43:40.721 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_PostFailureNotificationIfError: (0x13a16ec00) state started
+2026-11-15 21:43:40.722 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_transitionToStatus: 0x136e70e00 newStatus 2
+2026-11-15 21:43:41.544 Df Grabit[15615:c005] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_MentorPrerollComplete: <0x139b2fb80|> track 1 s, currentOrder 0x940cf99ac2a05ef9 (1001), orderFromPayload 0x940cf99ac2a05ef9 (1001), OrderComplete, CURRENT, masterOrder 0x940cf99ac5008af9 (1000001), waitingForMentorPreroll
+2026-11-15 21:43:41.544 Df Grabit[15615:c005] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_beginPrerollPhase2: <0x139b2fb80|> Beginning Preroll Phase 2, masterOrder 0x940cf99ac5008af9 (1000001)
+2026-11-15 21:43:41.544 Df Grabit[15615:c005] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBossPrerollCompleted: <0x139b2fb80|> called
+2026-11-15 21:43:41.544 Df Grabit[15615:c005] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_MentorStopping: <0x139b2fb80|> all mentors are now idle
+2026-11-15 21:43:41.544 Df Grabit[15615:c005] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_sendBecameIdleNotificationIfNowIdle: <0x139b2fb80|> posting BecameIdle notification now that all mentors have finished prerolling
+2026-11-15 21:43:41.545 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_SinglePassBossBecameIdle: (0x13a16ec00) state started
+2026-11-15 21:43:41.546 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_handleLastStep: (0x13a16ec00) state started
+2026-11-15 21:43:41.560 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_PostFailureNotificationIfError: (0x13a16ec00) state finish writing called
+2026-11-15 21:43:41.560 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_handleLastStep: Leaving [0x13a16ec00] err 0 state finish writing completed
+2026-11-15 21:43:41.561 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_transitionToStatus: 0x136e70e00 newStatus 4
+2026-11-15 21:43:41.566 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBossPrerollCompleted: <0x139b2fb80|> cleaning up for invalidation
+2026-11-15 21:43:41.566 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_sendBecameIdleNotificationIfNowIdle: <0x139b2fb80|> posting BecameIdle notification now that all mentors have finished prerolling
+2026-11-15 21:43:41.568 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e31ce0)
+2026-11-15 21:43:41.571 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_Finalize: (0x13a16ec00) state invalidated
+2026-11-15 21:43:41.572 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x136ca70c0
+2026-11-15 21:43:41.573 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> FigAssetReaderTrackFinalize: (0x136e31ce0)
+2026-11-15 21:43:41.575 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e31ce0)
+2026-11-15 21:43:41.643 Df Grabit[15615:bd96] [com.apple.WebKit:PerformanceLogging] WebContent[15685]: PerformanceMonitor::measurePostLoadCPUUsage: Process was using 0.2% CPU after the page load.
+2026-11-15 21:43:42.544 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [F9BA0AFA-5204-47BA-B622-E771A5FA0693 Hostname#b68c63e2:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:43:42.808 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=118] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:43:42.808 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=118 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:43:42.808 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=118] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:43:42.809 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=118] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:43:42.809 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=118] WebResourceLoader::WebResourceLoader
+2026-11-15 21:43:42.824 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=118] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:43:42.825 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=118] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:43:42.825 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=118] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:43:42.825 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=118 SubResourceLoader::didFinishLoading
+2026-11-15 21:43:43.968 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> FigAssetCreateWithURL: Called for asset 0x136d84400 by client [], url [0x108c7be40] <file // redacted-XMEXKG // mp4> createFlags 0x8 optionsDict <redacted>
+2026-11-15 21:43:43.968 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> figPruneOSTransactionArrayWhilePerformingOperation: [Fig Transaction] Pruned transaction weak reference holder: <0x13a1ce900>
+2026-11-15 21:43:43.968 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> FigOSTransactionCreateWithProcessName: [Fig Transaction] Added transaction weak reference holder with URL <0x13ebd13e0>: 1794779024 URLAsset withURL 15615:Grabit  7310586834057946104
+2026-11-15 21:43:43.968 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLLoaderCreate: newLoader: 0x13ebcc540
+2026-11-15 21:43:43.968 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLHandlerCreate: newHandler: com.apple.avfoundation.customurl.cfurlconnection.0x13a253300 options: {
+    "CURLHOption_OKToLogURLs" = 0;
+}
+2026-11-15 21:43:43.968 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_installHandler: 0x13ebcc560: handler: 0x13a253300 priority: 100
+2026-11-15 21:43:43.968 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLHandlerCreate: newHandler: com.apple.avfoundation.authkeychain.0x13a253200 options: {
+    "CURLHOption_OKToLogURLs" = 0;
+}
+2026-11-15 21:43:44.008 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_installHandler: 0x13ebcc560: handler: 0x13a253200 priority: 800
+2026-11-15 21:43:44.022 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> FigAssetCreateWithURL: Called for asset 0x136d84e40 by client [], url [0x136e177e0] <file // redacted-+P+T6X // m4a> createFlags 0x8 optionsDict <redacted>
+2026-11-15 21:43:44.022 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> FigOSTransactionCreateWithProcessName: [Fig Transaction] Added transaction weak reference holder with URL <0x13ebd1300>: 1794779024 URLAsset withURL 15615:Grabit  7310575219820254164
+2026-11-15 21:43:44.022 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLLoaderCreate: newLoader: 0x13ebcc770
+2026-11-15 21:43:44.022 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLHandlerCreate: newHandler: com.apple.avfoundation.customurl.cfurlconnection.0x13a253580 options: {
+    "CURLHOption_OKToLogURLs" = 0;
+}
+2026-11-15 21:43:44.022 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_installHandler: 0x13ebcc790: handler: 0x13a253580 priority: 100
+2026-11-15 21:43:44.022 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> FigCustomURLHandlerCreate: newHandler: com.apple.avfoundation.authkeychain.0x13a253600 options: {
+    "CURLHOption_OKToLogURLs" = 0;
+}
+2026-11-15 21:43:44.023 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_installHandler: 0x13ebcc790: handler: 0x13a253600 priority: 800
+2026-11-15 21:43:44.026 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> FigOSTransactionCreateWithProcessName: [Fig Transaction] Added transaction weak reference holder <0x13ebd15e0>: 1794779024 URLAsset withFormatReader 15615:Grabit
+2026-11-15 21:43:44.026 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> FigAssetExportSessionCreateWithAsset: 0x136e71000
+2026-11-15 21:43:44.026 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_ExportAsynchronously: 0x136e71000
+2026-11-15 21:43:44.026 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_validateOutputFileTypeForExport: 0x136e71000
+2026-11-15 21:43:44.027 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_transitionToStatus: 0x136e71000 newStatus 1
+2026-11-15 21:43:44.027 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_createRemakerAndBeginExport: 0x136e71000
+2026-11-15 21:43:44.028 Df Grabit[15615:bc94] [com.apple.coremedia:playback-memory] <<< FigOSTransactionsUtilities >>> FigOSTransactionCreateWithProcessName: [Fig Transaction] Added transaction weak reference holder <0x13ebd17a0>: 1794779024 URLAsset withFormatReader 15615:Grabit
+2026-11-15 21:43:44.029 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_SetTimeRange: (0x13ebc9a00) [0.000,inf]
+2026-11-15 21:43:44.029 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_AddPassthroughTrackWithOptions: (0x13ebc9a00) id 1
+2026-11-15 21:43:44.030 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_AddPassthroughTrackWithOptions: (0x13ebc9a00) id 2
+2026-11-15 21:43:44.030 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_StartOutput: (0x13ebc9a00) Starting
+2026-11-15 21:43:44.031 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> bossBuildMentorForTrack: <0x139b2fb80|> track 1 (vide) enableForStepping mentor 0x13eb37000 (snippetMentor 0x0 -> loopingMentor 0x0 -> superEditMentor 0x13eb37000 -> editMentor 0x13eb36d00 -> gaplessMentor 0x0 -> videoMentor 0x13ebf3000
+2026-11-15 21:43:44.031 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> bossBuildMentorForTrack: <0x139b2fb80|> track 2 (soun) enableForStepping mentor 0x13eb35800 (snippetMentor 0x13eb35800 -> loopingMentor 0x0 -> superEditMentor 0x13eb35200 -> editMentor 0x13eb36700 -> gaplessMentor 0x0 -> audioMentor 0x13ebb6580
+2026-11-15 21:43:44.032 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> FigPlaybackBossCreate: returning boss = 0x139b2fb80
+2026-11-15 21:43:44.032 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> FigPlaybackBossSendSamplesForTimeRange: <0x139b2fb80|> called, startTime = 0.000, endTime = inf, options = 0
+2026-11-15 21:43:44.032 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Boss >>>> bossSetMentorModesToForwardPlayback: <0x139b2fb80|> called, tracks 0...1, start time 0.000, end time inf, rate 1.00, previousOutputDisposition=1
+2026-11-15 21:43:44.033 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< Remaker >>>> remaker_StartOutput: (0x13ebc9a00) posting Remaker_Started
+2026-11-15 21:43:44.033 Df Grabit[15615:bc99] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_transitionToStatus: 0x136e71000 newStatus 2
+2026-11-15 21:43:44.033 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_PostFailureNotificationIfError: (0x13ebc9a00) state started
+2026-11-15 21:43:44.319 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_MentorPrerollComplete: <0x139b2fb80|> track 1 v, currentOrder 0x940cf99ac2a05ef9 (1001), orderFromPayload 0x940cf99ac2a05ef9 (1001), DidReachPrerollLevel, CURRENT, masterOrder 0x940cf99ac5008af9 (1000001), waitingForMentorPreroll
+2026-11-15 21:43:44.324 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_MentorPrerollComplete: <0x139b2fb80|> track 2 s, currentOrder 0x940cf99ac2a242f9 (2001), orderFromPayload 0x940cf99ac2a242f9 (2001), DidReachPrerollLevel, CURRENT, masterOrder 0x940cf99ac5008af9 (1000001), waitingForMentorPreroll
+2026-11-15 21:43:44.324 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_beginPrerollPhase2: <0x139b2fb80|> Beginning Preroll Phase 2, masterOrder 0x940cf99ac5008af9 (1000001)
+2026-11-15 21:43:44.324 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBossPrerollCompleted: <0x139b2fb80|> called
+2026-11-15 21:43:44.507 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_MentorStopping: <0x139b2fb80|> all mentors are now idle
+2026-11-15 21:43:44.507 Df Grabit[15615:c05f] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_sendBecameIdleNotificationIfNowIdle: <0x139b2fb80|> posting BecameIdle notification now that all mentors have finished prerolling
+2026-11-15 21:43:44.600 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_SinglePassBossBecameIdle: (0x13ebc9a00) state started
+2026-11-15 21:43:44.600 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_handleLastStep: (0x13ebc9a00) state started
+2026-11-15 21:43:44.635 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_PostFailureNotificationIfError: (0x13ebc9a00) state finish writing called
+2026-11-15 21:43:44.635 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_handleLastStep: Leaving [0x13ebc9a00] err 0 state finish writing completed
+2026-11-15 21:43:44.636 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> figAssetExportSession_transitionToStatus: 0x136e71000 newStatus 4
+2026-11-15 21:43:44.640 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBossPrerollCompleted: <0x139b2fb80|> cleaning up for invalidation
+2026-11-15 21:43:44.640 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< Boss >>>> figPlaybackBoss_sendBecameIdleNotificationIfNowIdle: <0x139b2fb80|> posting BecameIdle notification now that all mentors have finished prerolling
+2026-11-15 21:43:44.661 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e32220)
+2026-11-15 21:43:44.661 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e32d80)
+2026-11-15 21:43:44.661 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> remakerFamily_Finalize: (0x13ebc9a00) state invalidated
+2026-11-15 21:43:44.661 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x136ca6640
+2026-11-15 21:43:44.662 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> FigAssetReaderTrackFinalize: (0x136e32220)
+2026-11-15 21:43:44.662 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e32220)
+2026-11-15 21:43:44.663 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> FigAssetReaderTrackFinalize: (0x136e32d80)
+2026-11-15 21:43:44.663 Df Grabit[15615:bc7e] [com.apple.coremedia:] <<<< FigExportCommmon >>>> assetReaderTrack_Invalidate: (0x136e32d80)
+2026-11-15 21:43:44.685 Df Grabit[15615:bc94] [com.apple.xpc:connection] [0x136c226c0] activating connection: mach=true listener=false peer=false name=com.apple.pasteboard.pasted
+2026-11-15 21:43:44.685 Df Grabit[15615:bc94] [com.apple.Pasteboard:Pasteboard] Retrieving pasteboard named com.apple.UIKit.pboard.general, create if needed: NO
+2026-11-15 21:43:44.707 Df Grabit[15615:bc94] [com.apple.Pasteboard:Pasteboard] ...retrieving pasteboard named com.apple.UIKit.pboard.general completed successfully.
+2026-11-15 21:43:44.833 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [3B9D2A7E-2563-4368-A4C1-8F51DB73358A Hostname#1278a8f2:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:43:45.716 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [52C8D7AC-9606-46FD-9AEF-74E7004405C2 Hostname#1278a8f2:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:43:45.884 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [DF0EDFAD-485B-48DA-B1A2-78E0E2918740 Hostname#1278a8f2:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:43:46.546 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=119] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:43:46.546 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=119 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:43:46.546 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=119] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:43:46.546 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=119] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:43:46.546 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=119] WebResourceLoader::WebResourceLoader
+2026-11-15 21:43:46.576 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=119] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:43:46.578 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=119] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:43:46.578 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=119] WebResourceLoader::didFinishResourceLoad: (length=382)
+2026-11-15 21:43:46.578 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=119 SubResourceLoader::didFinishLoading
+2026-11-15 21:43:46.644 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [5262ADA4-7CCE-48EB-BA9B-CB85CB0A66B6 Hostname#1278a8f2:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:43:46.827 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=120] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:43:46.827 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=120 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:43:46.827 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=120] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:43:46.828 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=120] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:43:46.828 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=120] WebResourceLoader::WebResourceLoader
+2026-11-15 21:43:46.838 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=120] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:43:46.838 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=120] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:43:46.838 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=120] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:43:46.838 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=120 SubResourceLoader::didFinishLoading
+2026-11-15 21:43:50.844 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=121] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:43:50.844 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=121 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:43:50.844 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=121] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:43:50.844 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=121] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:43:50.844 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=121] WebResourceLoader::WebResourceLoader
+2026-11-15 21:43:50.953 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=121] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:43:50.953 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=121] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:43:50.953 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=121] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:43:50.953 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=121 SubResourceLoader::didFinishLoading
+2026-11-15 21:43:54.767 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [70591FAF-0D30-41B7-A510-E8CA6133B578 Hostname#d60d85e9:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:43:54.958 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=122] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:43:54.958 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=122 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:43:54.958 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=122] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:43:54.958 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=122] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:43:54.958 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=122] WebResourceLoader::WebResourceLoader
+2026-11-15 21:43:54.975 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=122] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:43:54.975 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=122] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:43:54.975 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=122] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:43:54.975 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=122 SubResourceLoader::didFinishLoading
+2026-11-15 21:43:55.076 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [FB00A91B-07AB-4341-86F1-2030281BAF3C Hostname#d60d85e9:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:43:55.600 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [A406F8D0-D618-4571-8B6E-843571960A10 Hostname#d60d85e9:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:43:58.981 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=123] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:43:58.981 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=123 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:43:58.981 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=123] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:43:58.981 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=123] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:43:58.981 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=123] WebResourceLoader::WebResourceLoader
+2026-11-15 21:43:59.136 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=123] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:43:59.137 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=123] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:43:59.137 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=123] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:43:59.137 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=123 SubResourceLoader::didFinishLoading
+2026-11-15 21:44:00.886 Df Grabit[15615:bc94] [com.apple.network:path] nw_path_libinfo_path_check [3D79E1CA-AEAC-4109-8CD4-836DE3A55CB6 Hostname#d60d85e9:443 tcp, legacy-socket, attribution: developer]
+	libinfo check path: satisfied (Path is satisfied), interface: en0
+2026-11-15 21:44:02.345 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> FigAssetExportSession_Finalize: 0x136e71000
+2026-11-15 21:44:02.347 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x108cc9700
+2026-11-15 21:44:02.348 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x136d84400
+2026-11-15 21:44:02.348 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_invalidate: 0x13ebcc540 called
+2026-11-15 21:44:02.349 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x136d84e40
+2026-11-15 21:44:02.349 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_invalidate: 0x13ebcc770 called
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> FigAssetExportSession_Finalize: 0x136e70e00
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x136ca67c0
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x136ca69c0
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_invalidate: 0x13a1b92d0 called
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigAssetExportSession >>>> FigAssetExportSession_Finalize: 0x136e70a00
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x108daf640
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x13a11ebc0
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_invalidate: 0x13a1b9650 called
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<< URLAsset >>> URLAssetFinalize: Called for asset 0x13a11e000
+2026-11-15 21:44:02.350 Df Grabit[15615:bc94] [com.apple.coremedia:] <<<< FigCustomURLHandling >>>> curll_invalidate: 0x13a1b8af0 called
+2026-11-15 21:44:03.140 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=124] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:44:03.140 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=124 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:44:03.140 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=124] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:44:03.140 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=124] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:44:03.140 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=124] WebResourceLoader::WebResourceLoader
+2026-11-15 21:44:03.144 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=124] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:44:03.151 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=124] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:44:03.151 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=124] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:44:03.151 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=124 SubResourceLoader::didFinishLoading
+2026-11-15 21:44:07.154 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=125] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:44:07.155 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=125 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:44:07.155 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=125] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:44:07.155 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=125] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:44:07.155 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=125] WebResourceLoader::WebResourceLoader
+2026-11-15 21:44:07.168 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=125] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:44:07.168 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=125] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:44:07.168 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=125] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:44:07.168 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=125 SubResourceLoader::didFinishLoading
+2026-11-15 21:44:11.173 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=126] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:44:11.173 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=126 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:44:11.173 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=126] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:44:11.173 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=126] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:44:11.173 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=126] WebResourceLoader::WebResourceLoader
+2026-11-15 21:44:11.181 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=126] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:44:11.181 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=126] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:44:11.181 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=126] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:44:11.181 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=126 SubResourceLoader::didFinishLoading
+2026-11-15 21:44:15.183 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=127] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:44:15.183 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=127 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:44:15.183 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=127] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:44:15.183 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=127] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:44:15.183 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=127] WebResourceLoader::WebResourceLoader
+2026-11-15 21:44:15.195 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=127] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:44:15.195 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=127] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:44:15.196 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=127] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:44:15.196 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=127 SubResourceLoader::didFinishLoading
+2026-11-15 21:44:19.198 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=128] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:44:19.199 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=128 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:44:19.199 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=128] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:44:19.199 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=128] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:44:19.199 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=128] WebResourceLoader::WebResourceLoader
+2026-11-15 21:44:19.205 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=128] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:44:19.206 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=128] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:44:19.206 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=128] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:44:19.206 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=128 SubResourceLoader::didFinishLoading
+2026-11-15 21:44:23.210 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=129] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:44:23.211 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=129 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:44:23.211 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=129] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:44:23.211 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=129] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:44:23.211 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=129] WebResourceLoader::WebResourceLoader
+2026-11-15 21:44:23.220 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=129] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:44:23.220 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=129] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:44:23.220 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=129] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:44:23.220 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=129 SubResourceLoader::didFinishLoading
+2026-11-15 21:44:25.773 Df Grabit[15615:bc7e] [com.apple.Safari.SafeBrowsing:Database] Service did finish database update with protection type 1 and provider 1
+2026-11-15 21:44:25.774 Df Grabit[15615:bc7e] [com.apple.Safari.SafeBrowsing:Database] Service did finish database update with protection type 1 and provider 1
+2026-11-15 21:44:27.223 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=130] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:44:27.223 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=130 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:44:27.223 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=130] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:44:27.223 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=130] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:44:27.223 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=130] WebResourceLoader::WebResourceLoader
+2026-11-15 21:44:27.227 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=130] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:44:27.227 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=130] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:44:27.227 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=130] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:44:27.227 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=130 SubResourceLoader::didFinishLoading
+2026-11-15 21:44:31.229 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=131] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-15 21:44:31.229 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=131 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-15 21:44:31.229 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=131] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-15 21:44:31.229 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=131] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-15 21:44:31.229 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=131] WebResourceLoader::WebResourceLoader
+2026-11-15 21:44:31.234 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=131] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-15 21:44:31.234 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=131] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-15 21:44:31.234 Df Grabit[15615:bd96] [com.apple.WebKit:Network] WebContent[15685]: [webPageID=6, frameID=4294967297, resourceID=131] WebResourceLoader::didFinishResourceLoad: (length=2)
+2026-11-15 21:44:31.234 Df Grabit[15615:bd96] [com.apple.WebKit:ResourceLoading] WebContent[15685]: [pageID=6, frameID=4294967297, resourceID=131 SubResourceLoader::didFinishLoading

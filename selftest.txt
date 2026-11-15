@@ -1,0 +1,12 @@
+ok   engine and page (0.0s) {'app': '2.5.0', 'platform': 'ios', 'engine': {'active': '2026.10.26', 'bundled': '2026.10.26', 'pending': '', 'checking': True, 'error': ''}, 'ffmpeg': False, 'folder': '/Users/runner/Library/Developer/CoreSimulator/Devices/23C8F95C-765D-46A9-AE82-0BEE2921C8D7/data/Containers/Data/Application/260C274F-B3CE-48D1-8669-871385E9E5E1/Documents', 'insets': [124.0, 34.0], 'sites': []}
+ok   page layout (15.5s) {"sat":"124px","inline":"--sat: 124px; --sab: 34px;","top":{"x":0,"y":0,"width":402,"height":164,"top":0,"right":402,"bottom":164,"left":0},"hero":{"x":0,"y":0,"width":402,"height":277,"top":0,"right":402,"bottom":277,"left":0},"scrollY":0,"inner":[402,936],"vv":[0,936],"href":"http://127.0.0.1:51553/T/?sat=124&sab=34","css":".top { position: relative; z-index: 2; display: flex; align-items: center; gap: 8px; max-width: 560px; height: calc(40px + var(--sat)); margin: 0px auto; padding: calc(12px + var(--sat)) 16px 0; }"} | native {'contentOffset': [0.0, 0.0], 'contentInset': [0.0, 0.0, 0.0, 0.0], 'adjustedContentInset': [0.0, 0.0, 0.0, 0.0], 'safeAreaInsets': [62.0, 0.0, 34.0, 0.0], 'frame': [[0.0, -62.0], [402.0, 936.0]], 'in_window': [[0.0, -62.0], [402.0, 936.0]], 'parents': [['TogaContainerView', [[0.0, 0.0], [402.0, 874.0]]], ['UIViewControllerWrapperView', [[0.0, 0.0], [402.0, 874.0]]], ['UINavigationTransitionView', [[0.0, 0.0], [402.0, 874.0]]], ['UILayoutContainerView', [[0.0, 0.0], [402.0, 874.0]]], ['UIDropShadowView', [[0.0, 0.0], [402.0, 874.0]]], ['UITransitionView', [[0.0, 0.0], [402.0, 874.0]]], ['UIWindow', [[0.0, 0.0], [402.0, 874.0]]]]}
+ok   javascript engine (0.0s) JavaScriptCore works
+ok   join video + audio (9.5s) 91452 bytes
+ok   audio only from a video (1.0s) 36527 bytes
+ok   https (1.1s) certificates ok
+ok   download split streams end to end (2.0s) Self test clip.mp4, 91452 bytes
+ok   clipboard (0.0s) ''
+ok   safe area (0.0s) top/bottom = (124.0, 34.0)
+FAIL youtube (may be refused on build servers) (17.6s) GrabError: The site wants proof you are not a bot. Add an account (sign in) under Account and try again.
+     File "/Users/runner/Library/Developer/CoreSimulator/Devices/23C8F95C-765D-46A9-AE82-0BEE2921C8D7/data/Containers/Bundle/Application/EFCE3A92-DA5B-4948-BA08-96981E7405D2/Grabit.app/app/grabit/engine.py", line 232, in resolve
+DONE platform=ios folder=/Users/runner/Library/Developer/CoreSimulator/Devices/23C8F95C-765D-46A9-AE82-0BEE2921C8D7/data/Containers/Data/Application/260C274F-B3CE-48D1-8669-871385E9E5E1/Documents

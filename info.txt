@@ -1,0 +1,3 @@
+app=ios/build/grabitios/ios/xcode/build/Debug-iphonesimulator/Grabit.app bundle=app.grabit.grabitios device=23C8F95C-765D-46A9-AE82-0BEE2921C8D7
+    iPhone 17 (23C8F95C-765D-46A9-AE82-0BEE2921C8D7) (Shutdown) 
+run 43764556422 sha 60c286c2917bbc36252e4b522215ea4251396ad7 status success
