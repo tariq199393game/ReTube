@@ -111,6 +111,21 @@ def run(folder, url, app=None):
             facts['frame'] = [[round(float(getattr(part, f[0])), 1) for f in part._fields_] for part in (getattr(frame, frame._fields_[0][0]), getattr(frame, frame._fields_[1][0]))]
         except Exception as e:
             facts['frame'] = repr(e)
+        def rect(r):
+            return [[round(float(getattr(part, f[0])), 1) for f in part._fields_]
+                    for part in (getattr(r, r._fields_[0][0]), getattr(r, r._fields_[1][0]))]
+
+        try:
+            facts['in_window'] = rect(native.convertRect_toView_(_get(native, 'bounds'), None))
+            chain, view = [], native
+            for _ in range(8):
+                view = _get(view, 'superview')
+                if view is None:
+                    break
+                chain.append([str(_get(view, 'class').name) if hasattr(_get(view, 'class'), 'name') else str(view)[:40], rect(_get(view, 'frame'))])
+            facts['parents'] = chain
+        except Exception as e:
+            facts['in_window'] = repr(e)
         return '%s | native %s' % (page, facts)
 
     check('engine and page', ui)
