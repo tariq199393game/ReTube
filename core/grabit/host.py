@@ -149,6 +149,14 @@ def share(path):
         b.shareFile(path)
 
 
+def insets():
+    """(top, bottom) screen areas the page must keep clear, in CSS pixels. Only iOS reports any."""
+    try:
+        return list(_ios().safe_area()) if _ios() else [0, 0]
+    except Exception:
+        return [0, 0]
+
+
 def clipboard():
     return _ios().clipboard() if _ios() else ''
 

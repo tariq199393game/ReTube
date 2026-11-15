@@ -24,7 +24,7 @@ LOGIN_SITES = {'YouTube / Google': 'https://accounts.google.com/ServiceLogin?ser
 
 def _status():
     return {'app': __version__, 'platform': config.platform, 'engine': bootstrap.state, 'ffmpeg': bool(config.ffmpeg),
-            'folder': config.dl_dir, 'sites': list(LOGIN_SITES) if config.platform == 'android' else []}
+            'folder': config.dl_dir, 'insets': host.insets(), 'sites': list(LOGIN_SITES) if config.platform == 'android' else []}
 
 
 class Search:

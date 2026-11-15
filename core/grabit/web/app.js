@@ -3,10 +3,11 @@
 const $ = id => document.getElementById(id);
 const native = window.GrabitNative || null;   // present inside the Android app
 // iPhone: the app tells the page how much room the notch and home bar take
-for (const [key, name] of [['sat', 'top'], ['sab', 'bottom']]) {
-  const px = parseFloat(new URLSearchParams(location.search).get(key));
-  if (px > 0) document.documentElement.style.setProperty('--' + key, `max(env(safe-area-inset-${name}, 0px), ${px}px)`);
+function setInsets(top, bottom) {
+  if (top > 0) document.documentElement.style.setProperty('--sat', top + 'px');
+  if (bottom > 0) document.documentElement.style.setProperty('--sab', bottom + 'px');
 }
+{ const q = new URLSearchParams(location.search); setInsets(parseFloat(q.get('sat')), parseFloat(q.get('sab'))); }
 
 function h(tag, props, ...kids) {
   const el = document.createElement(tag);
@@ -472,6 +473,7 @@ $('proxySave').addEventListener('click', async () => {
 /* ------------------------------------------------------------ status */
 async function loadStatus() {
   const s = state.status = await api('status');
+  if (s.insets) setInsets(s.insets[0], s.insets[1]);
   $('ver').textContent = `${s.app} · engine ${s.engine.active || '?'}`;
   $('folder').textContent = s.folder;
   const android = s.platform === 'android', ios = s.platform === 'ios';
