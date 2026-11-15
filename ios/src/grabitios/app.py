@@ -44,6 +44,7 @@ class Grabit(toga.App):
     def _open(self, url):
         try:
             from grabit import ios
+            ios.web_view = self.web._impl.native
             top, bottom = ios.safe_area()
             url += '?sat=%d&sab=%d' % (round(top), round(bottom))
         except Exception:

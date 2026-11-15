@@ -7,6 +7,7 @@ import os
 import threading
 
 run_on_main = None      # set by the app: schedules a function on the UI thread
+web_view = None         # set by the app: the native view that shows the page
 _libs = {}
 
 
@@ -34,7 +35,24 @@ def safe_area():
     app = _get(ObjCClass('UIApplication'), 'sharedApplication')
     window = _get(app, 'keyWindow') or _get(_get(app, 'windows'), 'firstObject')
     insets = _get(window, 'safeAreaInsets')
-    return float(_field(insets, 'top', 0)), float(_field(insets, 'bottom', 2))
+    top, bottom = float(_field(insets, 'top', 0)), float(_field(insets, 'bottom', 2))
+    if web_view is not None:
+        # The page's view does not always start at the top of the screen (the app framework can
+        # place it higher). Measure where it really is, so the page clears what is hidden plus the notch.
+        try:
+            rect = web_view.convertRect_toView_(_get(web_view, 'bounds'), None)
+            origin = getattr(rect, rect._fields_[0][0])
+            size = getattr(rect, rect._fields_[1][0])
+            y = float(getattr(origin, origin._fields_[1][0]))
+            height = float(getattr(size, size._fields_[1][0]))
+            screen = _get(window, 'bounds')
+            screen_size = getattr(screen, screen._fields_[1][0])
+            screen_height = float(getattr(screen_size, screen_size._fields_[1][0]))
+            top = max(0.0, top - y)
+            bottom = max(0.0, bottom - (screen_height - (y + height)))
+        except Exception:
+            pass
+    return top, bottom
 
 
 def eval_js(script):
