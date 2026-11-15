@@ -25,7 +25,7 @@ requires = [
 [tool.briefcase.app.grabitios.iOS]
 requires = [
     "toga-iOS~=0.5.7",
-    "std-nslog~=2.0",
+    "std-nslog~=1.0.3",
 ]
 permission.photo_library = "Grabit saves the videos and pictures you download to your Photos when you choose Save."
 info."UIFileSharingEnabled" = true
