@@ -92,7 +92,10 @@ def run(folder, url, app=None):
               'vv:[visualViewport.offsetTop,visualViewport.height],href:location.href.replace(/\\/[\\w-]{10,}\\//,"/T/"),'
               'css:[...document.styleSheets[0].cssRules].find(r=>r.selectorText==".top").cssText})')
         time.sleep(4)
-        page = asyncio.run_coroutine_threadsafe(app.web.evaluate_javascript(js), app.loop).result(15)
+        async def ask():
+            return await app.web.evaluate_javascript(js)
+
+        page = asyncio.run_coroutine_threadsafe(ask(), app.loop).result(15)
         native = app.web._impl.native
         from grabit.ios import _get
         frame = _get(native, 'frame')
