@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Grabit</title>
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <img src="icon.svg" alt="">
+  <strong>Grabit</strong>
+  <span id="chip" class="pill" hidden></span>
+</header>
+
+<main>
+  <section id="grab">
+    <div class="hero" id="hero" data-art="video">
+      <h1 id="headline">Grab a video</h1>
+      <p class="lede" id="hint"></p>
+    </div>
+
+    <div class="linkbox">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></svg>
+      <input id="url" type="url" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Paste a link">
+      <button id="paste" class="mini" type="button" hidden>Paste &amp; Get</button>
+    </div>
+
+    <div class="seg" id="mode" role="radiogroup" aria-label="What to grab">
+      <button type="button" role="radio" data-mode="single" class="on">Single video</button>
+      <button type="button" role="radio" data-mode="playlist">Playlist</button>
+    </div>
+
+    <button id="go" class="primary" type="button">
+      <span id="goLabel">Get Info</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+    </button>
+    <p class="error" id="error" hidden></p>
+    <div id="result"></div>
+  </section>
+
+  <section id="library" hidden>
+    <div class="hero" data-art="library">
+      <h1>Library</h1>
+      <p class="lede">Everything you saved, ready to play or view.</p>
+    </div>
+    <div class="chips" id="libFilter"></div>
+    <div id="libGrid" class="grid"></div>
+    <p class="empty" id="libEmpty" hidden>Nothing here yet. Videos and images you download appear here, ready to play.</p>
+  </section>
+
+  <section id="settings" hidden>
+    <div class="hero" data-art="settings">
+      <h1>Settings</h1>
+      <p class="lede">Accounts, proxy and engine updates.</p>
+    </div>
+
+    <div class="group">
+      <h2>Account</h2>
+      <p class="note">Only needed when a site asks you to sign in or to confirm you're not a bot. Facebook, Instagram and private videos usually need it.</p>
+      <div class="row">
+        <select id="account"></select>
+        <button id="accAdd" class="ghost" type="button">Add</button>
+        <button id="accDel" class="ghost danger" type="button" hidden>Remove</button>
+      </div>
+      <div id="accForm" class="sub" hidden>
+        <div id="signin" hidden>
+          <label for="site">Sign in inside the app</label>
+          <div class="row"><select id="site"></select><button id="siteGo" class="ghost strong" type="button">Sign in</button></div>
+          <p class="note">A sign-in page opens. When you are logged in, tap Done. The account is saved on this device only.</p>
+        </div>
+        <label for="accName">Or import cookies</label>
+        <input id="accName" placeholder="Account name (e.g. My Facebook)">
+        <textarea id="accCookies" rows="4" spellcheck="false" placeholder="Paste a cookies.txt file or a JSON cookie export here"></textarea>
+        <div class="row end"><button id="accCancel" class="ghost" type="button">Cancel</button><button id="accSave" class="ghost strong" type="button">Save account</button></div>
+      </div>
+    </div>
+
+    <div class="group">
+      <h2>Proxy / VPN</h2>
+      <p class="note">Enter the proxy address from your VPN or proxy app. If your VPN covers the whole device, you don't need this.</p>
+      <div class="row">
+        <select id="proxyMode"><option value="off">Off</option><option value="custom">Use proxy below</option></select>
+        <button id="proxySave" class="ghost" type="button">Save</button>
+      </div>
+      <input id="proxyUrl" class="mono" placeholder="socks5://127.0.0.1:1080" autocapitalize="off" spellcheck="false">
+    </div>
+
+    <div class="group">
+      <h2>About</h2>
+      <dl>
+        <div><dt>Version</dt><dd id="ver"></dd></div>
+        <div><dt>Saved in</dt><dd id="folder"></dd></div>
+      </dl>
+      <button id="update" class="ghost wide" type="button">Check for Any Updates</button>
+    </div>
+  </section>
+
+  <section id="jobsCard" hidden>
+    <div class="row between"><h2>Downloads</h2><button id="clear" class="mini" type="button">Clear finished</button></div>
+    <div id="jobs"></div>
+  </section>
+</main>
+
+<nav class="dock" role="tablist">
+  <button role="tab" data-tab="video" class="on"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="14" rx="3"/><path d="m16 10 5-3v10l-5-3"/></svg><span>Video</span></button>
+  <button role="tab" data-tab="images"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.7"/><path d="m4 18 5.5-5 4 3.5 2.5-2 4 3.5"/></svg><span>Images</span></button>
+  <button role="tab" data-tab="library"><svg viewBox="0 0 24 24"><path d="M4 7a2 2 0 0 1 2-2h4l2 2.5h6a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg><span>Library</span><i id="badge" hidden></i></button>
+  <button role="tab" data-tab="settings"><svg viewBox="0 0 24 24"><path d="M4 7h10m4 0h2M4 17h2m4 0h10M14 4.5v5M10 14.5v5"/></svg><span>Settings</span></button>
+</nav>
+
+<div id="viewer" hidden>
+  <div class="vbar">
+    <button id="vClose" class="icon" type="button" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div id="vTitle"></div>
+  </div>
+  <div id="vStage"></div>
+  <button id="vPrev" class="nav" type="button" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+  <button id="vNext" class="nav" type="button" aria-label="Next"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+  <div class="vactions">
+    <button id="vOpen" class="ghost" type="button">Open in another app</button>
+    <button id="vShare" class="ghost" type="button" hidden>Share</button>
+    <button id="vReveal" class="ghost" type="button" hidden>Show in folder</button>
+    <button id="vDelete" class="ghost danger" type="button">Delete</button>
+  </div>
+</div>
+<div id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

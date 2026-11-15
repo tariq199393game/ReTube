@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+ios/build/
+ios/logs/
+ios/src/grabit/
+out/
+ci/

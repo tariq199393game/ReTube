@@ -1,0 +1,91 @@
+name: Grabit iOS
+
+on:
+  push:
+    branches: [grabit-ios]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ios:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Create the Xcode project
+        run: |
+          pip install briefcase
+          cd ios
+          rm -rf src/grabit && cp -R ../core/grabit src/grabit
+          briefcase create iOS --no-input
+
+      - name: Build for the simulator
+        run: cd ios && briefcase build iOS --no-input
+
+      - name: Run in an iPhone simulator (self-test and screenshots)
+        continue-on-error: true
+        run: |
+          mkdir -p ci
+          APP=$(find ios/build -type d -path '*Debug-iphonesimulator/*.app' | head -1)
+          BID=$(/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' "$APP/Info.plist")
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json, sys
+          d = json.load(sys.stdin)['devices']
+          best = [(k, x) for k, v in d.items() if 'iOS' in k for x in v if x['name'].startswith('iPhone')]
+          best.sort(key=lambda t: (t[0], 'Pro' not in t[1]['name']))
+          print(best[-1][1]['udid'])")
+          echo "app=$APP bundle=$BID device=$UDID" | tee ci/info.txt
+          xcrun simctl list devices available | grep "$UDID" >> ci/info.txt || true
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl install "$UDID" "$APP"
+          SIMCTL_CHILD_GRABIT_SELFTEST=1 xcrun simctl launch "$UDID" "$BID"
+          sleep 25
+          xcrun simctl io "$UDID" screenshot ci/screen-1.png || true
+          DATA=$(xcrun simctl get_app_container "$UDID" "$BID" data)
+          for i in $(seq 1 60); do
+            grep -q '^DONE' "$DATA/Documents/selftest.txt" 2>/dev/null && break
+            sleep 5
+          done
+          cp "$DATA/Documents/selftest.txt" ci/selftest.txt || echo "no self-test output" > ci/selftest.txt
+          cat ci/selftest.txt
+          ls -la "$DATA/Documents" > ci/documents.txt || true
+          xcrun simctl io "$UDID" screenshot ci/screen-2.png || true
+          xcrun simctl spawn "$UDID" log show --last 8m --style compact --predicate 'process == "Grabit"' 2>/dev/null | tail -300 > ci/log.txt || true
+
+      - name: Build for iPhone (unsigned)
+        run: |
+          PROJ=$(find ios/build -name '*.xcodeproj' | head -1)
+          xcodebuild build -project "$PROJ" -configuration Release -sdk iphoneos -arch arm64 -quiet \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" 2>&1 | tail -40
+          APP=$(find ios/build -type d -path '*Release-iphoneos/*.app' | head -1)
+          test -n "$APP"
+          mkdir -p out/Payload && cp -R "$APP" out/Payload/
+          (cd out && zip -qry Grabit.ipa Payload)
+          ls -la out/Grabit.ipa
+          (ls -la out/Grabit.ipa; find out/Payload -maxdepth 2 | head -40; find out/Payload -name '*.framework' | wc -l) > ci/ipa.txt
+
+      - name: Publish the iPhone file
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete grabit-ios --yes --cleanup-tag || true
+          gh release create grabit-ios out/Grabit.ipa --prerelease --target "$GITHUB_SHA" \
+            --title "Grabit for iPhone (unsigned)" \
+            --notes "Unsigned build. Sign it with your own Apple ID (3uTools, Sideloadly, AltStore or SideStore) before installing."
+
+      - name: Save test results
+        if: always()
+        run: |
+          mkdir -p ci && echo "run $GITHUB_RUN_ID sha $GITHUB_SHA status ${{ job.status }}" >> ci/info.txt
+          cd ci && git init -q && git checkout -q -b grabit-ios-ci
+          git add -A && git -c user.name=ci -c user.email=ci@example.com commit -qm "results for $GITHUB_SHA"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" grabit-ios-ci

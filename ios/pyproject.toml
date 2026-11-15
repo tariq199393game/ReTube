@@ -1,0 +1,35 @@
+# Grabit for iPhone / iPad. Built with Briefcase (https://briefcase.readthedocs.io) on a Mac:
+#   see .github/workflows/ios.yml for the exact steps.
+[tool.briefcase]
+project_name = "Grabit"
+bundle = "app.grabit"
+version = "2.5.0"
+url = "https://example.com/grabit"
+license = "LicenseRef-Proprietary"
+license-files = []
+author = "Grabit"
+author_email = "grabit@example.com"
+
+[tool.briefcase.app.grabitios]
+formal_name = "Grabit"
+description = "Save videos and images from almost any site"
+icon = "icons/grabit"
+# src/grabit is a copy of ../core/grabit, made by the build (one engine for every platform)
+sources = ["src/grabitios", "src/grabit"]
+requires = [
+    "yt-dlp==2026.10.26",
+    "yt-dlp-ejs==0.8.0",
+    "certifi",
+]
+
+[tool.briefcase.app.grabitios.iOS]
+requires = [
+    "toga-iOS~=0.5.7",
+    "std-nslog~=2.0",
+]
+permission.photo_library = "Grabit saves the videos and pictures you download to your Photos when you choose Save."
+info."UIFileSharingEnabled" = true
+info."LSSupportsOpeningDocumentsInPlace" = true
+info."UIUserInterfaceStyle" = "Dark"
+info."ITSAppUsesNonExemptEncryption" = false
+info."NSAppTransportSecurity" = { NSAllowsLocalNetworking = true }
