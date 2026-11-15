@@ -91,6 +91,12 @@ def run(folder, url):
     check('https', https)
     check('download split streams end to end', split_download)
     check('clipboard', lambda: repr(host.clipboard())[:40])
+
+    def insets():
+        from grabit import ios
+        return 'top/bottom = %s' % (ios.safe_area(),)
+
+    check('safe area', insets)
     check('youtube (may be refused on build servers)', youtube)
     lines.append('DONE platform=%s folder=%s' % (config.platform, folder))
     with open(os.path.join(folder, 'selftest.txt'), 'w', encoding='utf-8') as f:

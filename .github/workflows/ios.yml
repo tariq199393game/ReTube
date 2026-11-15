@@ -34,7 +34,7 @@ jobs:
         continue-on-error: true
         run: |
           mkdir -p ci
-          APP=$(find ios/build -type d -path '*Debug-iphonesimulator/*.app' | head -1)
+          APP=$(find ios/build -type d -path '*Debug-iphonesimulator/Grabit.app' | head -1)
           BID=$(/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' "$APP/Info.plist")
           UDID=$(xcrun simctl list devices available -j | python3 -c "
           import json, sys
@@ -63,15 +63,17 @@ jobs:
 
       - name: Build for iPhone (unsigned)
         run: |
-          PROJ=$(find ios/build -name '*.xcodeproj' | head -1)
+          PROJ=$(find ios/build -name 'Grabit.xcodeproj' | head -1)
+          test -n "$PROJ"
           xcodebuild build -project "$PROJ" -configuration Release -sdk iphoneos -arch arm64 -quiet \
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" 2>&1 | tail -40
-          APP=$(find ios/build -type d -path '*Release-iphoneos/*.app' | head -1)
+          APP=$(find ios/build -type d -path '*Release-iphoneos/Grabit.app' | head -1)
           test -n "$APP"
+          /usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' -c 'Print MainModule' -c 'Print MinimumOSVersion' "$APP/Info.plist"
           mkdir -p out/Payload && cp -R "$APP" out/Payload/
           (cd out && zip -qry Grabit.ipa Payload)
           ls -la out/Grabit.ipa
-          (ls -la out/Grabit.ipa; find out/Payload -maxdepth 2 | head -40; find out/Payload -name '*.framework' | wc -l) > ci/ipa.txt
+          (ls -la out/Grabit.ipa; /usr/libexec/PlistBuddy -c 'Print' "$APP/Info.plist" | head -60; find out/Payload -maxdepth 2 | head -30; find out/Payload -name '*.framework' | wc -l; find out/Payload -name '*.so' | wc -l) > ci/ipa.txt
 
       - name: Publish the iPhone file
         if: success()

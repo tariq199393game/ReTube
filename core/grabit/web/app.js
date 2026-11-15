@@ -2,6 +2,11 @@
 /* Grabit UI. Everything shown from remote sites is inserted as text, never as HTML. */
 const $ = id => document.getElementById(id);
 const native = window.GrabitNative || null;   // present inside the Android app
+// iPhone: the app tells the page how much room the notch and home bar take
+for (const [key, name] of [['sat', 'top'], ['sab', 'bottom']]) {
+  const px = parseFloat(new URLSearchParams(location.search).get(key));
+  if (px > 0) document.documentElement.style.setProperty('--' + key, `max(env(safe-area-inset-${name}, 0px), ${px}px)`);
+}
 
 function h(tag, props, ...kids) {
   const el = document.createElement(tag);

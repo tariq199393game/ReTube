@@ -41,6 +41,15 @@ class Grabit(toga.App):
         except Exception:
             traceback.print_exc()
 
+    def _open(self, url):
+        try:
+            from grabit import ios
+            top, bottom = ios.safe_area()
+            url += '?sat=%d&sab=%d' % (round(top), round(bottom))
+        except Exception:
+            traceback.print_exc()
+        self.web.url = url
+
     def _start(self):
         try:
             import certifi
@@ -52,7 +61,7 @@ class Grabit(toga.App):
             downloads = os.path.join(home, 'Documents')      # shows up in the Files app as "Grabit"
             url = engine.launch(data, downloads, 'ios')
             print('Grabit is running at', url, flush=True)
-            self.loop.call_soon_threadsafe(lambda: setattr(self.web, 'url', url))
+            self.loop.call_soon_threadsafe(lambda: self._open(url))
             if os.environ.get('GRABIT_SELFTEST'):
                 from grabitios import selftest
                 selftest.run(downloads, url)
