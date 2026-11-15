@@ -39,7 +39,7 @@ def run(folder, url):
     def javascript():
         assert host.eval_js('(function(){return String(6*7)})()') == '42'
         assert host.eval_js(jsc_webview.wrap('console.log(JSON.stringify({a:[1,2,3].map(function(x){return x*2})}))')) == '{"a":[2,4,6]}'
-        return 'JavaScriptCore works; solver registered: %s' % jsc_webview.register()
+        return 'JavaScriptCore works'
 
     def join():
         out = os.path.join(folder, 'selftest-joined.mp4')

@@ -65,8 +65,11 @@ jobs:
         run: |
           PROJ=$(find ios/build -name 'Grabit.xcodeproj' | head -1)
           test -n "$PROJ"
+          set -o pipefail
+          # ad-hoc signature only: whoever installs it re-signs it with their own Apple ID
           xcodebuild build -project "$PROJ" -configuration Release -sdk iphoneos -arch arm64 -quiet \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" 2>&1 | tail -40
+            CODE_SIGN_IDENTITY=- AD_HOC_CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_STYLE=Manual \
+            DEVELOPMENT_TEAM="" PROVISIONING_PROFILE_SPECIFIER="" 2>&1 | tail -60
           APP=$(find ios/build -type d -path '*Release-iphoneos/Grabit.app' | head -1)
           test -n "$APP"
           /usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' -c 'Print MainModule' -c 'Print MinimumOSVersion' "$APP/Info.plist"

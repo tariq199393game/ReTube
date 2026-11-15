@@ -63,9 +63,9 @@ def mux(inputs, out, audio_only=False):
             if kind in have:
                 continue
             tracks = asset.tracksWithMediaType_(kind)
-            if tracks is None or int(_get(tracks, 'count')) == 0:
+            if tracks is None or len(tracks) == 0:     # the bridge presents NSArray as a Python list
                 continue
-            source = tracks.objectAtIndex_(0)
+            source = tracks[0]
             span = _get(source, 'timeRange')                       # CMTimeRange of the whole track
             start = type(_field(span, 'start', 0))(0, 600, 1, 0)   # CMTime zero: value, timescale, valid flag, epoch
             track = composition.addMutableTrackWithMediaType_preferredTrackID_(kind, 0)
