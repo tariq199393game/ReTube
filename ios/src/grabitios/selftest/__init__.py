@@ -91,11 +91,15 @@ def run(folder, url, app=None):
               'hero:document.querySelector(".hero").getBoundingClientRect().toJSON(),scrollY:window.scrollY,inner:[innerWidth,innerHeight],'
               'vv:[visualViewport.offsetTop,visualViewport.height],href:location.href.replace(/\\/[\\w-]{10,}\\//,"/T/"),'
               'css:[...document.styleSheets[0].cssRules].find(r=>r.selectorText==".top").cssText})')
-        time.sleep(4)
-        async def ask():
-            return await app.web.evaluate_javascript(js)
+        async def ask(code):
+            return await app.web.evaluate_javascript(code)
 
-        page = asyncio.run_coroutine_threadsafe(ask(), app.loop).result(15)
+        for _ in range(30):     # wait for the real page to be on screen
+            if asyncio.run_coroutine_threadsafe(ask('!!document.querySelector(".top")'), app.loop).result(15):
+                break
+            time.sleep(1)
+        time.sleep(3)
+        page = asyncio.run_coroutine_threadsafe(ask(js), app.loop).result(15)
         native = app.web._impl.native
         from grabit.ios import _get
         frame = _get(native, 'frame')
